@@ -2,6 +2,9 @@ const express = require('express');
 const hbs = require('hbs')
 const fs = require('fs')
 
+// sets up environment variable for heroku and if not available, will set port 3000 (dev)
+const port = process.env.PORT || 3000;
+
 // requirement for node to set up server
 let app = express();
 
@@ -59,6 +62,6 @@ app.get('/bad', (req, res) => {
 });
 
 // tells node to listen on port 3000
-app.listen(3000, () => {
-  console.log('server is up on port 3000')
+app.listen(port, () => {
+  console.log(`server is up on port ${port}`)
 });
