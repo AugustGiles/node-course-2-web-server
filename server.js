@@ -61,6 +61,12 @@ app.get('/bad', (req, res) => {
   });
 });
 
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Portfolio Page'
+  })
+})
+
 // tells node to listen on port 3000
 app.listen(port, () => {
   console.log(`server is up on port ${port}`)
