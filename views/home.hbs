@@ -1,0 +1,16 @@
+<!-- hbs file! Does dynamic templating stuff with {{variableName}} syntax-->
+<!-- the screamIt and welcomeMessage line... screamIt is a hbs helper function and it takes in welcomeMessage -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Some Website</title>
+  </head>
+  <body>
+    {{> header}}
+    <p>{{screamIt welcomeMessage}}</p>
+
+    {{> footer}}
+  </body>
+</html>
